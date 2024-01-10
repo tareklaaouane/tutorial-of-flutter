@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class CurrencyConverter extends StatelessWidget {
@@ -24,7 +26,7 @@ class CurrencyConverter extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "hello world ",
+                "currency converter ",
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -69,11 +71,13 @@ class CurrencyConverter extends StatelessWidget {
                 style: const ButtonStyle(
                     elevation: MaterialStatePropertyAll(15),
                     shadowColor: MaterialStatePropertyAll(
-                        Color.fromARGB(142, 255, 193, 7)),
+                        Color.fromARGB(142, 255, 191, 0)),
                     backgroundColor: MaterialStatePropertyAll(Colors.amber),
                     foregroundColor: MaterialStatePropertyAll(Colors.black),
                     maximumSize:
-                        MaterialStatePropertyAll(Size(double.infinity, 50))),
+                        MaterialStatePropertyAll(Size(double.infinity, 50)),
+                    shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(40))))),
                 child: const Text(
                   "convert",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
